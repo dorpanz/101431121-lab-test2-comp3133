@@ -3,6 +3,6 @@ import { MissionListComponent } from './mission-list/mission-list.component';
 import { MissionDetailsComponent } from './mission-details/mission-details.component';
 
 export const routes: Routes = [
-  { path: '', component: MissionListComponent },
-  { path: 'mission-details/:id', component: MissionDetailsComponent }
+  { path: '', component: MissionListComponent },  
+  { path: 'mission-details/:id', component: MissionDetailsComponent, data: { renderMode: 'no-prerender' } } // Disable prerendering
 ];
