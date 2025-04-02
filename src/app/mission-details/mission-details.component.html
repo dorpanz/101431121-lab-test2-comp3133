@@ -10,10 +10,5 @@
       <p><strong>Launch Site:</strong> {{ mission.launch_site.site_name_long }}</p>
       <p><strong>Launch Details:</strong> {{ mission.details || 'No description available.' }}</p>
     </div>
-  
-    <div class="launch-status">
-      <p><strong>Launch Success:</strong> {{ mission.launch_success ? 'Yes' : 'No' }}</p>
-      <p><strong>Landing Success:</strong> {{ mission.rocket.first_stage.cores[0].land_success ? 'Yes' : 'No' }}</p>
-    </div>
   </div>
   
