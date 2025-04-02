@@ -1,67 +1,74 @@
-SpaceX Launch Explorer
-COMP 3133 – Full Stack Development II – Lab Test 2
-By: Daria Ignateva (101431121)
+Sure! Here's your **README.md** file in proper Markdown format:
 
-This is an Angular application that displays SpaceX launch missions using the SpaceX API. Users can filter launches based on year, launch success, and landing success, and view detailed mission information.
+```md
+# 🚀 SpaceX Launch Explorer  
+**COMP 3133 – Full Stack Development II – Lab Test 2**  
+**By: Daria Ignateva (101431121)**  
 
-🌟 Features
-View All SpaceX Missions with launch year, success status, and rocket details.
+This is an **Angular application** that displays **SpaceX launch missions** using the SpaceX API. Users can **filter launches** based on year, launch success, and landing success, and **view detailed mission information**.
 
-Filter Missions based on launch year, launch success, and landing success.
+## 🌟 Features
+- **View All SpaceX Missions** with launch year, success status, and rocket details.  
+- **Filter Missions** based on launch year, launch success, and landing success.  
+- **View Detailed Information** about each mission, including mission patch, launch site, and failure details.  
+- **Modern UI** built with **Angular Material**.  
+- **Deployed on Vercel** for easy access.  
 
-View Detailed Information about each mission, including mission patch, launch site, and failure details.
+---
 
-Modern UI built with Angular Material.
+## 📸 Screenshots
 
-Deployed on Vercel for easy access.
+### **Home Page - Mission List**
+![Mission List Screenshot](screenshots/mission-list.png)
 
-📸 Screenshots
-Home Page - Mission List
+### **Filtered Missions**
+![Filtered Missions Screenshot](screenshots/filtered-missions.png)
 
-Filtered Missions
+### **Mission Details Page**
+![Mission Details Screenshot](screenshots/mission-details.png)
 
-Mission Details Page
+---
 
-🛠️ Tech Stack
-Frontend: Angular, Angular Material
+## 🛠️ Tech Stack
+- **Frontend**: Angular, Angular Material  
+- **Backend API**: [SpaceX API](https://api.spacexdata.com/v3/launches)  
+- **Deployment**: Vercel  
 
-Backend API: SpaceX API
+---
 
-Deployment: Vercel
+## 🚀 Setup & Installation
 
-🚀 Setup & Installation
-1️⃣ Clone the repository
-bash
-Copy
-Edit
-git clone https://github.com/your-github-username/your-repo-name.git
+### 1️⃣ **Clone the repository**
+```bash
+git clone https://github.com/dorpanz/101431121-lab-test2-comp3133.git
 cd your-repo-name
-2️⃣ Install dependencies
-bash
-Copy
-Edit
-npm install
-3️⃣ Run the app locally
-bash
-Copy
-Edit
-ng serve
-Then, open http://localhost:4200/ in your browser.
+```
 
-4️⃣ Build for production
-bash
-Copy
-Edit
+### 2️⃣ **Install dependencies**
+```bash
+npm install
+```
+
+### 3️⃣ **Run the app locally**
+```bash
+ng serve
+```
+Then, open `http://localhost:4200/` in your browser.
+
+### 4️⃣ **Build for production**
+```bash
 ng build --configuration=production
-5️⃣ Deploy on Vercel
-bash
-Copy
-Edit
+```
+
+### 5️⃣ **Deploy on Vercel**
+```bash
 vercel --prod
-📂 Project Structure
-pgsql
-Copy
-Edit
+```
+
+---
+
+## 📂 Project Structure
+```
 /src
   ├── app/
   │   ├── mission-list/  --> Displays the list of SpaceX launches
@@ -75,3 +82,10 @@ Edit
   ├── index.html  --> App entry point
   ├── angular.json  --> Angular configuration
   ├── package.json  --> Dependencies and scripts
+```
+
+
+## 🌐 Live Demo  
+🔗 **[Live App on Vercel](https://101431121-lab-test2-comp3133.vercel.app/)**  
+
+---
