@@ -15,14 +15,10 @@ This is an **Angular application** that displays **SpaceX launch missions** usin
 
 ## 📸 Screenshots
 
-### **Home Page - Mission List**
-![Mission List Screenshot](screenshots/mission-list.png)
-
-### **Filtered Missions**
-![Filtered Missions Screenshot](screenshots/filtered-missions.png)
-
-### **Mission Details Page**
-![Mission Details Screenshot](screenshots/mission-details.png)
+![Screenshot](screenshots/screen1.png)
+![Screenshot](screenshots/screen2.png)
+![Screenshot](screenshots/screen3.png)
+![Screenshot](screenshots/screen4.png)
 
 ---
 
