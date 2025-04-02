@@ -1,59 +1,77 @@
-# 101431121LabTest2Comp3133
+SpaceX Launch Explorer
+COMP 3133 – Full Stack Development II – Lab Test 2
+By: Daria Ignateva (101431121)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+This is an Angular application that displays SpaceX launch missions using the SpaceX API. Users can filter launches based on year, launch success, and landing success, and view detailed mission information.
 
-## Development server
+🌟 Features
+View All SpaceX Missions with launch year, success status, and rocket details.
 
-To start a local development server, run:
+Filter Missions based on launch year, launch success, and landing success.
 
-```bash
+View Detailed Information about each mission, including mission patch, launch site, and failure details.
+
+Modern UI built with Angular Material.
+
+Deployed on Vercel for easy access.
+
+📸 Screenshots
+Home Page - Mission List
+
+Filtered Missions
+
+Mission Details Page
+
+🛠️ Tech Stack
+Frontend: Angular, Angular Material
+
+Backend API: SpaceX API
+
+Deployment: Vercel
+
+🚀 Setup & Installation
+1️⃣ Clone the repository
+bash
+Copy
+Edit
+git clone https://github.com/your-github-username/your-repo-name.git
+cd your-repo-name
+2️⃣ Install dependencies
+bash
+Copy
+Edit
+npm install
+3️⃣ Run the app locally
+bash
+Copy
+Edit
 ng serve
-```
+Then, open http://localhost:4200/ in your browser.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4️⃣ Build for production
+bash
+Copy
+Edit
+ng build --configuration=production
+5️⃣ Deploy on Vercel
+bash
+Copy
+Edit
+vercel --prod
+📂 Project Structure
+pgsql
+Copy
+Edit
+/src
+  ├── app/
+  │   ├── mission-list/  --> Displays the list of SpaceX launches
+  │   ├── mission-details/  --> Shows details of a specific mission
+  │   ├── services/  --> Fetches data from SpaceX API
+  │   ├── app.routes.ts  --> Configures Angular routes
+  │   ├── app.component.ts  --> Main entry component
+  ├── assets/
+  ├── styles.css  --> Global styles
+  ├── main.ts  --> Application bootstrap
+  ├── index.html  --> App entry point
+  ├── angular.json  --> Angular configuration
+  ├── package.json  --> Dependencies and scripts
