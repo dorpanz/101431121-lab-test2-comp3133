@@ -1,6 +1,3 @@
-Sure! Here's your **README.md** file in proper Markdown format:
-
-```md
 # 🚀 SpaceX Launch Explorer  
 **COMP 3133 – Full Stack Development II – Lab Test 2**  
 **By: Daria Ignateva (101431121)**  
