@@ -1,0 +1,56 @@
+<div class="filter-container">
+  <h1>COMP 3133 | Lab Test2 | SpaceX API| Daria Ignateva| 101431121</h1>
+  <div class="filter-group">
+    <label for="launchYear">Filter by Launch Year</label>
+    <input
+      type="text"
+      id="launchYear"
+      [(ngModel)]="launchYear"
+      placeholder="Enter Year"
+    />
+  </div>
+
+  <div class="filter-group">
+    <label for="launchSuccess">Launch</label>
+    <select id="launchSuccess" [(ngModel)]="launchSuccess">
+      <option value="">All</option>
+      <option value="true">Successful</option>
+      <option value="false">Failed</option>
+    </select>
+  </div>
+
+  <div class="filter-group">
+    <label for="landSuccess">Landing</label>
+    <select id="landSuccess" [(ngModel)]="landSuccess">
+      <option value="">All</option>
+      <option value="true">Successful</option>
+      <option value="false">Failed</option>
+    </select>
+  </div>
+
+  <div class="filter-buttons">
+    <button (click)="applyFilters()">Filter</button>
+    <button (click)="resetFilters()">Reset Filters</button>
+  </div>
+</div>
+
+<div class="missions">
+  <mat-card *ngFor="let mission of filteredMissions" class="mission-card">
+    <img
+      mat-card-image
+      [src]="mission.links.mission_patch_small"
+      alt="Mission Image"
+    />
+
+    <mat-card-title>{{ mission.mission_name }}</mat-card-title>
+    <mat-card-subtitle
+      >Launch Year: {{ mission.launch_year }}</mat-card-subtitle
+    >
+    <mat-card-content>
+      <p>
+        <strong>Description:</strong>
+        {{ mission.details || "No description available." }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
