@@ -7,8 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class SpaceXService {
   private baseUrl = 'https://api.spacexdata.com/v3/launches'; 
+
   constructor(private http: HttpClient) {}
+
   getAllMissions(): Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl);
   }
+
+  getMissionById(flightNumber: string | number): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/${flightNumber}`);
+  }
+  
 }

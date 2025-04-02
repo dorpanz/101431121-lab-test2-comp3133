@@ -1,0 +1,61 @@
+.mission-details {
+    font-family: Arial, sans-serif;
+    background-color: #f4f961;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .mission-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .mission-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .mission-patch {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  
+  .mission-info,
+  .launch-status {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mission-info p,
+  .launch-status p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .mission-info p strong,
+  .launch-status p strong {
+    color: #333;
+  }
+  
+  .launch-status p {
+    font-weight: bold;
+  }
+  
+  .launch-status p:nth-child(odd) {
+    color: #4caf50; 
+  }
+  
+  .launch-status p:nth-child(even) {
+    color: #f44336; 
+  }
+  

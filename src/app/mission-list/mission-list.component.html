@@ -35,22 +35,28 @@
 </div>
 
 <div class="missions">
-  <mat-card *ngFor="let mission of filteredMissions" class="mission-card">
-    <img
-      mat-card-image
-      [src]="mission.links.mission_patch_small"
-      alt="Mission Image"
-    />
-
-    <mat-card-title>{{ mission.mission_name }}</mat-card-title>
-    <mat-card-subtitle
-      >Launch Year: {{ mission.launch_year }}</mat-card-subtitle
+    <mat-card 
+      *ngFor="let mission of filteredMissions" 
+      class="mission-card"
+      (click)="selectMission(mission)"
     >
-    <mat-card-content>
-      <p>
-        <strong>Description:</strong>
-        {{ mission.details || "No description available." }}
-      </p>
-    </mat-card-content>
-  </mat-card>
-</div>
+      <img
+        mat-card-image
+        [src]="mission.links.mission_patch_small"
+        alt="Mission Image"
+      />
+      
+      <mat-card-title>{{ mission.mission_name }}</mat-card-title>
+      <mat-card-subtitle>Launch Year: {{ mission.launch_year }}</mat-card-subtitle>
+      <mat-card-content>
+        <p>
+          <strong>Description:</strong>
+          {{ mission.details || "No description available." }}
+        </p>
+      </mat-card-content>
+  
+      <button mat-button color="primary" (click)="goToMissionDetails(mission.flight_number, $event)">View Details</button>
+
+    </mat-card>
+  </div>
+  

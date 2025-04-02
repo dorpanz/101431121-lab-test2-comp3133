@@ -2,8 +2,9 @@ import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router'; 
 import { SpaceXService } from '../services/spacex.service';
+import { MissionDetailsComponent } from '../mission-details/mission-details.component'; 
 
 @Component({
   selector: 'app-mission-list',
@@ -11,14 +12,15 @@ import { SpaceXService } from '../services/spacex.service';
   templateUrl: './mission-list.component.html',
   styleUrls: ['./mission-list.component.css'],
   imports: [CommonModule, MatCardModule, RouterModule, FormsModule], 
-  providers: [SpaceXService] 
+  providers: [SpaceXService]
 })
 export class MissionListComponent implements OnInit {
   missions: any[] = [];
   filteredMissions: any[] = [];
+  selectedMission: any = null;
   private spaceXService = inject(SpaceXService);
+  private router = inject(Router); // Inject Router
 
-  // Filters
   launchYear: string = '';
   launchSuccess: string = '';
   landSuccess: string = '';
@@ -30,7 +32,7 @@ export class MissionListComponent implements OnInit {
   fetchMissions(): void {
     this.spaceXService.getAllMissions().subscribe((data: any[]) => {
       this.missions = data;
-      this.applyFilters(); // Apply filters when data loads
+      this.applyFilters();
     });
   }
 
@@ -50,4 +52,13 @@ export class MissionListComponent implements OnInit {
     this.landSuccess = '';
     this.applyFilters();
   }
+
+  selectMission(mission: any): void {
+    this.selectedMission = mission;
+  }
+  goToMissionDetails(flightNumber: number, event: MouseEvent): void {
+    event.stopPropagation(); // Prevent the card's click event
+    this.router.navigate(['/mission-details', flightNumber]);
+  }
+  
 }

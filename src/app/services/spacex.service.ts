@@ -13,8 +13,7 @@ export class SpaceXService {
   getAllMissions(): Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl);
   }
-
-  getMissionDetails(flightNumber: number): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/${flightNumber}`);
+  getMissionById(id: string): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/${id}`);
   }
 }

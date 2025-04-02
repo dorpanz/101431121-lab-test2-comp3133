@@ -73,3 +73,13 @@
     background-color: #220e2a;
   }
   
+
+.missions button {
+    z-index: 1;
+    position: relative;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  

@@ -1,0 +1,19 @@
+<div class="mission-details" *ngIf="mission">
+    <div class="mission-header">
+      <h2>{{ mission.mission_name }}</h2>
+      <img [src]="mission.links.mission_patch" alt="Mission Patch" class="mission-patch" />
+    </div>
+  
+    <div class="mission-info">
+      <p><strong>Launch Year:</strong> {{ mission.launch_year }}</p>
+      <p><strong>Rocket:</strong> {{ mission.rocket.rocket_name }} ({{ mission.rocket.first_stage.cores[0].type }})</p>
+      <p><strong>Launch Site:</strong> {{ mission.launch_site.site_name_long }}</p>
+      <p><strong>Launch Details:</strong> {{ mission.details || 'No description available.' }}</p>
+    </div>
+  
+    <div class="launch-status">
+      <p><strong>Launch Success:</strong> {{ mission.launch_success ? 'Yes' : 'No' }}</p>
+      <p><strong>Landing Success:</strong> {{ mission.rocket.first_stage.cores[0].land_success ? 'Yes' : 'No' }}</p>
+    </div>
+  </div>
+  
